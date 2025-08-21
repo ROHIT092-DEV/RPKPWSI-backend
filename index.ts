@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 const allowedOrigins = [
   "http://localhost:3000", // local frontend
   "https://rpkpwsi.onrender.com", // deployed frontend
+  "https://api.rpkpwsi.com" // production API
 ];
 
 app.use(cookieParser());
