@@ -10,8 +10,11 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy only the compiled dist directory to the working directory
-COPY dist ./dist
+# Copy the rest of the application code to the working directory
+COPY . .
+
+# Compile TypeScript to JavaScript
+RUN npm run build
 
 # Expose the port your app runs on
 EXPOSE 3000
